@@ -1,24 +1,32 @@
-TitaniumMods
-============
+## About
 
-Titanium Framework Mod
+This is an implementation of currentPageIndicatorTintColor and pageIndicatorTintColor for ScrollableView on Titanium SDK 3.2.1.GA
 
+## Installation
 
+Replace `TiUIScrollableView.h`, `TiUIScrollableView.m`, `TiUIScrollableViewProxy.h` and `TiUIScrollableViewProxy.m` in `~/Library/Application Support/Titanium/mobilesdk/osx/3.2.1.GA/iphone/Classes` with the files provided.
 
-Added 
+## Usage
 
- pageIndicatorTintColor
- currentPageIndicatorTintColor
+### You can now use
+```javascript
+pageIndicatorTintColor:'gray',
+currentPageIndicatorTintColor:'black',
+```
 
- to ScrollableView to select the colors of the pagin indicator
+### Sample
+```javascript
+var theScrollableView = Ti.UI.createScrollableView({
+ width : 'auto',
+	height : 'auto',
+	backgroundColor : 'transparent',
+	showPagingControl : true,
+	pagingControlHeight : 30,
+	pagingControlColor : 'transparent',
+	pageIndicatorTintColor : 'gray', //Indicator Color
+	currentPageIndicatorTintColor : 'black', //Active Indicator Color
+	overlayEnabled : true, //Add Pagination as an Overlay to View
+});
+```
 
- simply overwrite the files
-
-
-TiUIScrollableView.h
-TiUIScrollableView.m
-TiUIScrollableViewProxy.m
-
-in ~/Library/Application Support/Titanium/mobilesdk/osx/3.0.2.GA/iphone/Classes
-
-clean and rebuil to have it working // framework version 3.0.2.GA or custom
+#### Clean and rebuild your project to have it working.
